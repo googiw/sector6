@@ -1,0 +1,38 @@
+body {
+    font-size: $browser-font-context;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+h1 { font-size: em(40px); }
+h2 { font-size: em(34px); }
+h3 { font-size: em(30px); }
+h4 { font-size: em(24px); }
+h5 { font-size: em(22px); }
+h6 { font-size: em(22px); }
+
+@media (max-width: 767px) {
+    h1 { font-size: em(30px); }
+    h2 { font-size: em(24px); }
+    h3 { font-size: em(20px); }
+    h4 { font-size: em(18px); }
+    h5 { font-size: em(18px); }
+    h6 { font-size: em(18px); }
+}
+
+a {
+    word-break: break-all;
+    color: $body-link-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $body-link-color-hover;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,32 @@
+/* -----------------------------------------------
+Example Font Face
+------------------------------------------------- */
+
+/**
+ * Config $font-path: '../fonts/' in _var.scss
+ *
+ * Use font-face @mixin font-face($family,$src,$style,$weight);
+ *
+ * Example 4 font weight
+ * Font-weights: (Light: 300, Regular: 400, Medium: 500, SemiBold: 600, Bold: 700);
+ *
+ * @include font-face('Kanit', $font-path, $style: 300, $weight: normal);
+ * @include font-face('Kanit', $font-path, $style: 400, $weight: normal);
+ * @include font-face('Kanit', $font-path, $style: 500, $weight: normal);
+ * @include font-face('Kanit', $font-path, $style: 600, $weight: normal);
+ * @include font-face('Kanit', $font-path, $style: 700, $weight: normal);
+ */
+
+ /*
+ How to use font face
+ ------------------------------------------------- */
+ /**
+  * .foo {
+  *     font-family: Kanit;
+  *     font-weight: 300; // Defualt
+  * }
+  * .bar {
+  *     font-family: Kanit;
+  *     font-weight: 600;
+  * }
+  */

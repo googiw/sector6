@@ -1,0 +1,28 @@
+/* -----------------------------------------------
+Basic Setting
+------------------------------------------------- */
+
+/*--- Font ---*/
+$path-font: "../fonts/";
+$browser-font-context: 18px;
+
+$font-color: #333;
+$font-weight: normal;
+$line-height: 1.7em;
+$font-stack: Thonburi, Arial, sans-serif;
+
+/*--- Path of Image ---*/
+$path-img : "../images";
+
+/*--- Breakpoints Media Query ---*/
+
+$xs: 320px; // Extra small screen / phone
+$sm: 576px; // Small screen / phone
+$md: 768px; // Medium screen / tablet
+$lg: 992px; // Large screen / desktop
+$xl: 1200px; // Extra large screen / wide desktop
+
+
+/*--- Link ---*/
+$body-link-color: #5E9C26;
+$body-link-color-hover: #D75C00;
