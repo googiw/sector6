@@ -109,20 +109,3 @@
     // filter: url(grayscale.svg); /* Firefox 4+ */
     filter: none; /* IE 6-9 */
 }
-
-// default text underline
-@mixin text-underline($fonsize, $color-link) {
-  background-position: 0 ($fonsize);
-  background-size: 1px 1px;
-  background-image: linear-gradient($color-link 50%, $color-link 50%);
-  background-repeat: repeat-x;
-  cursor: pointer;
-}
-// header underline
-@mixin head-underline($fonsize, $color-link) {
-  background-position: 0 ($fonsize);
-  background-size: 2px 2px;
-  background-image: linear-gradient($color-link 50%, $color-link 50%);
-  background-repeat: repeat-x;
-  cursor: pointer;
-}

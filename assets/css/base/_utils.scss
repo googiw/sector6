@@ -1,6 +1,10 @@
 /* -----------------------------------------------
 Font
 ------------------------------------------------- */
+
+._font-head { font-family: 'Prompt', Thonburi, Arial, sans-serif;}
+._font-stack { font-family: 'CS ChatThai', Thonburi, Arial, sans-serif; }
+
 ._fw200 { font-weight: 200; }
 ._fw300 { font-weight: 300; }
 ._fw400 { font-weight: 400; }
@@ -19,9 +23,6 @@ Font
 ._lh-lg { line-height: 1.4rem !important;}
 ._lh-xl { line-height: 1.5rem !important;}
 
-._f-league_gothic { font-family: 'league_gothic' !important; }
-._f-kanit { font-family: 'Kanit' !important; }
-._t-uppercase { text-transform: uppercase !important; }
 
 /* -----------------------------------------------
 Display
@@ -100,8 +101,6 @@ Margin, Padding Classes
  	._pl-#{$i} { padding-left: #{$i}px !important; }
  }
 
-
-
 /* -----------------------------------------------
 Display Classes
 ------------------------------------------------- */
@@ -118,4 +117,82 @@ Display Classes
   &:after {
     clear: both;
   }
+}
+
+._box-shadow {
+  background: #fff;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+}
+
+
+// reset bootstrap //
+.dropdown-menu {
+  border-radius: 0;
+  font-size: inherit;
+  .dropdown-item {
+    &:focus,
+    &:hover,
+    &.active,
+    &:active {
+      color: inherit;
+      background-color: $bg-gray-color;
+    }
+  }
+}
+
+
+// modal
+.modal-content {
+  border: 0;
+  border-radius: 0;
+  .modal-header {
+    font-weight: 400;
+    background: $primary-color;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    padding: 0.5rem;
+    .close {
+      color: transparent;
+      outline: none;
+    }
+    .modal-title {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+}
+
+.close {
+  font-family: $font-stack;
+  font-weight: 400;
+  opacity: 1;
+}
+
+
+// form
+.custom-control-label::before {
+  background-color: transparent;
+  border: 1.7px solid $primary-color;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::before,
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  background-color: $primary-color;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::after,
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+  // background-image: none;
+}
+
+// badge
+.badge {
+  background: $bg-badge;
+  @include border-radius(20px);
+  padding: .4em .6em;
+  color: $txt-badge;
+  font-family: $font-head;
+  font-weight: 300;
+  font-size: 13px;
 }

@@ -1,13 +1,18 @@
-@import "vender/include-media";
+
+@import "vender/bootstrap.min.css";
+@import "vender/bootstrap-reboot.min.css";
+@import "vender/bootstrap-grid.min.css";
+
 
 @import "base/mixins";
 @import "base/var";
 @import "base/base";
-@import "base/font";
 @import "base/utils";
+@import "base/font";
 
 @import "layout/header";
 @import "layout/footer";
 @import "layout/main";
 
-@import "component/component";
+@import "component/sidebar";
+@import "component/filter";

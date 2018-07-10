@@ -1,3 +1,6 @@
+@import url(vender/bootstrap.min.css);
+@import url(vender/bootstrap-reboot.min.css);
+@import url(vender/bootstrap-grid.min.css);
 /* -----------------------------------------------
 Basic Setting
 ------------------------------------------------- */
@@ -6,91 +9,76 @@ Basic Setting
 /*--- Breakpoints Media Query ---*/
 /*--- Link ---*/
 body {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.7em;
+  font-family: "CS ChatThai", Thonburi, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5em;
   color: #333; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 20px;
+  font-family: "Prompt", Thonburi, Arial, sans-serif;
+  margin: 0 0 15px;
   line-height: 1.5; }
 
 h1 {
-  font-size: 2.22222em; }
+  font-size: 1.25em; }
 
 h2 {
-  font-size: 1.88889em; }
+  font-size: 1.15em; }
 
 h3 {
-  font-size: 1.66667em; }
+  font-size: 1.1em; }
 
 h4 {
-  font-size: 1.33333em; }
+  font-size: 1em; }
 
 h5 {
-  font-size: 1.22222em; }
+  font-size: 0.9em; }
 
 h6 {
-  font-size: 1.22222em; }
+  font-size: 0.9em; }
 
 @media (max-width: 767px) {
   h1 {
-    font-size: 1.66667em; }
+    font-size: 1.15em; }
 
   h2 {
-    font-size: 1.33333em; }
+    font-size: 1.1em; }
 
   h3 {
-    font-size: 1.11111em; }
+    font-size: 1.05em; }
 
   h4 {
     font-size: 1em; }
 
   h5 {
-    font-size: 1em; }
+    font-size: 0.9em; }
 
   h6 {
-    font-size: 1em; } }
+    font-size: 0.9em; } }
 a {
   word-break: break-all;
-  color: #5E9C26; }
+  color: #000; }
   a:hover, a:focus, a:active {
-    color: #D75C00;
+    color: #333;
     text-decoration: none; }
 
-/* -----------------------------------------------
-Example Font Face
-------------------------------------------------- */
-/**
- * Config $font-path: '../fonts/' in _var.scss
- *
- * Use font-face @mixin font-face($family,$src,$style,$weight);
- *
- * Example 4 font weight
- * Font-weights: (Light: 300, Regular: 400, Medium: 500, SemiBold: 600, Bold: 700);
- *
- * @include font-face('Kanit', $font-path, $style: 300, $weight: normal);
- * @include font-face('Kanit', $font-path, $style: 400, $weight: normal);
- * @include font-face('Kanit', $font-path, $style: 500, $weight: normal);
- * @include font-face('Kanit', $font-path, $style: 600, $weight: normal);
- * @include font-face('Kanit', $font-path, $style: 700, $weight: normal);
- */
-/*
-How to use font face
-------------------------------------------------- */
-/**
- * .foo {
- *     font-family: Kanit;
- *     font-weight: 300; // Defualt
- * }
- * .bar {
- *     font-family: Kanit;
- *     font-weight: 600;
- * }
- */
+.table thead th {
+  vertical-align: top;
+  font-weight: 500;
+  font-family: "Prompt", Thonburi, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.2em; }
+
 /* -----------------------------------------------
 Font
 ------------------------------------------------- */
+._font-head {
+  font-family: 'Prompt', Thonburi, Arial, sans-serif; }
+
+._font-stack {
+  font-family: 'CS ChatThai', Thonburi, Arial, sans-serif; }
+
 ._fw200 {
   font-weight: 200; }
 
@@ -135,15 +123,6 @@ Font
 
 ._lh-xl {
   line-height: 1.5rem !important; }
-
-._f-league_gothic {
-  font-family: 'league_gothic' !important; }
-
-._f-kanit {
-  font-family: 'Kanit' !important; }
-
-._t-uppercase {
-  text-transform: uppercase !important; }
 
 /* -----------------------------------------------
 Display
@@ -845,19 +824,188 @@ Display Classes
 ._clearfix:after {
   clear: both; }
 
+._box-shadow {
+  background: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); }
+
+.dropdown-menu {
+  border-radius: 0;
+  font-size: inherit; }
+  .dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item.active, .dropdown-menu .dropdown-item:active {
+    color: inherit;
+    background-color: #E7E7E7; }
+
+.modal-content {
+  border: 0;
+  border-radius: 0; }
+  .modal-content .modal-header {
+    font-weight: 400;
+    background: #1A988B;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    padding: 0.5rem; }
+    .modal-content .modal-header .close {
+      color: transparent;
+      outline: none; }
+    .modal-content .modal-header .modal-title {
+      font-size: 18px;
+      font-weight: 300; }
+
+.close {
+  font-family: "CS ChatThai", Thonburi, Arial, sans-serif;
+  font-weight: 400;
+  opacity: 1; }
+
+.custom-control-label::before {
+  background-color: transparent;
+  border: 1.7px solid #1A988B; }
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before,
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #1A988B; }
+
+.badge {
+  background: #333;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  padding: .4em .6em;
+  color: #fff;
+  font-family: "Prompt", Thonburi, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 13px; }
+
+/* -----------------------------------------------
+Example Font Face
+------------------------------------------------- */
+/**
+ * Config $font-path: '../fonts/' in _var.scss
+ *
+ * Use font-face @mixin font-face($family,$src,$style,$weight);
+ *
+ * Example 4 font weight
+ * Font-weights: (Light: 300, Regular: 400, Medium: 500, SemiBold: 600, Bold: 700);
+ *
+ * @include font-face('Kanit', $font-path, $style: 300, $weight: normal);
+ * @include font-face('Kanit', $font-path, $style: 400, $weight: normal);
+ * @include font-face('Kanit', $font-path, $style: 500, $weight: normal);
+ * @include font-face('Kanit', $font-path, $style: 600, $weight: normal);
+ * @include font-face('Kanit', $font-path, $style: 700, $weight: normal);
+ */
+/*
+How to use font face
+------------------------------------------------- */
+/**
+ * .foo {
+ *     font-family: Kanit;
+ *     font-weight: 300; // Defualt
+ * }
+ * .bar {
+ *     font-family: Kanit;
+ *     font-weight: 600;
+ * }
+ */
+@font-face {
+  font-family: 'CS ChatThai';
+  src: url("../fonts/subset-CSChatThai.eot");
+  src: url("../fonts/subset-CSChatThai.eot?#iefix") format("embedded-opentype"), url("../fonts/subset-CSChatThai.woff2") format("woff2"), url("../fonts/subset-CSChatThai.woff") format("woff"), url("../fonts/subset-CSChatThai.ttf") format("truetype"), url("../fonts/subset-CSChatThai.svg#CSChatThai") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 header {
-  background: #e3e3e3; }
+  background: #1A988B;
+  color: #fff; }
 
 footer {
-  background: #e3e3e3; }
+  background: #1A988B;
+  color: #fff; }
 
-.wrapper {
+main {
+  background: #F3F3F3; }
+
+.content {
   background: #fff; }
 
+.page-title {
+  font-style: italic; }
+
 /*----------------------------------
-Component : -
+Component : Sidebar
 Variants : -
 By : -
 ----------------------------------*/
+.sidebar {
+  font-family: "Prompt", Thonburi, Arial, sans-serif;
+  background: #E9E9E9; }
+  @media (min-width: 768px) {
+    .sidebar {
+      border-right: 1px solid #9B9B9B; } }
+
+/*----------------------------------
+Component : Filter
+Variants : -
+By : -
+----------------------------------*/
+.outside-filter-bar > .label {
+  display: inline-block;
+  margin: 0 15px 0 0; }
+.outside-filter-bar > .view-list {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .outside-filter-bar > .view-list > .view-list-item {
+    display: inline-block; }
+    .outside-filter-bar > .view-list > .view-list-item > a {
+      color: #CBCBCB;
+      padding: 0 5px; }
+      .outside-filter-bar > .view-list > .view-list-item > a.active, .outside-filter-bar > .view-list > .view-list-item > a:hover {
+        color: #1A988B; }
+
+/*----------------------------------
+Component : Inside Filter
+Variants : -
+By : -
+----------------------------------*/
+.inside-filter-bar {
+  font-family: "Prompt", Thonburi, Arial, sans-serif;
+  font-size: 0.8em;
+  background: #E7E7E7;
+  border-top: 1px solid #C2C2C2;
+  border-bottom: 1px solid #C2C2C2; }
+  .inside-filter-bar .add-filter {
+    border-left: 1px solid #ccc;
+    margin: 0 0 0 10px;
+    padding: 0 0 0 10px; }
+  .inside-filter-bar .modal-filter {
+    position: inherit; }
+    .inside-filter-bar .modal-filter .modal-dialog {
+      position: absolute;
+      z-index: 9999;
+      right: 0;
+      left: 0; }
+      @media (min-width: 576px) {
+        .inside-filter-bar .modal-filter .modal-dialog {
+          min-width: 250px;
+          margin: 1rem auto;
+          -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+          right: auto;
+          left: auto; } }
+
+/*----------------------------------
+Component : BTN Close
+----------------------------------*/
+.btn-close {
+  background: transparent;
+  border: none;
+  padding: 0; }
+  .btn-close .close-circle {
+    color: #fff;
+    font-size: 1em; }
 
 /*# sourceMappingURL=style.css.map */

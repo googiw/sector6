@@ -1,37 +1,226 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-  <title></title>
+  <title>report</title>
   <meta charset="UTF-8">
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link rel="stylesheet" href="assets/css/vender/bootstrap.min.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-</head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Prompt:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.12/sass.sync.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js"></script>
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+      $(".btn-close").click(function(){
+          $(".badge").toggleClass("d-none");
+      });
+  });
+  </script>
+  </head>
+
+
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container">
+    <header class="p-2">
+      <div class="">
         Header
       </div>
     </header>
 
     <div class="main">
-      <div class="container">
-        Content
-      </div>
+      <div class="row no-gutters">
+          <div class="col-12 col-md-3 col-xl-2 sidebar">
+            <ul class="nav">
+              <li class="nav-item dropdown dropright">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">เลือกดูรายงาน</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">รายงานแสดงการกระจายตัวของหน่วยจัดการ</a>
+                  <a class="dropdown-item" href="#">รายงานความรับผิดชอบโครงการแยกตามชื่อพี่เลี้ยง</a>
+                  <a class="dropdown-item" href="#">รายงานแสดงการกระจายจำนวนโครงการ</a>
+                </div>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active" href="#">แจ้งปัญหาการใช้งาน</a>
+                </li>
+            </ul>
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-10">
+            <div class="p-3 p-lg-4">
+              <div class="content _box-shadow">
+                <div class="row no-gutters p-2 d-flex align-items-center">
+                  <div class="col-12 col-md-8">
+                    <h1 class="page-title mb-0">รายงานแสดงการกระจายตัวของหน่วยจัดการ</h1>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="outside-filter-bar d-flex justify-content-md-end">
+                      <p class="label">แสดงในรูปแบบ</spa>
+                      <ul class="view-list">
+                        <li class="view-list-item"><a href="#" class="active"><i class="fas fa-list-ul fa-md"></i></a></li>
+                        <li class="view-list-item"><a href="#"><i class="fas fa-map-marker-alt fa-md"></i></a></li>
+                        <li class="view-list-item"><a href="#"><i class="far fa-chart-bar fa-md"></i></a></li>
+                      </ul>
+                    </div> <!-- /outside-filter-bar -->
+                  </div>
+                </div>
+
+                <div class="inside-filter-bar p-2">
+                  <div class="d-flex align-items-center">
+                    <div class="filter-tab d-flex align-items-center flex-wrap">
+                      <div class="mr-2"><i class="fas fa-filter"></i></div>
+                      <div class="selected mr-2">
+                        <span class="badge">
+                          <span class="selected-title">ปีที่เริ่มหน่วยจัดการ</span> : <span class="selected-content">2560</span>
+                          <button type="button" class="btn-close">
+                            <span class="close-circle"><i class="fas fa-times-circle"></i></span>
+                          </button>
+                        </span>
+                      </div>
+                      <div class="selected">
+                        <span class="badge">
+                          <span class="selected-title">สถานะหน่วยจัดการ</span> : <span class="selected-content">Inactive</span>
+                          <button type="button" class="btn-close">
+                            <span class="close-circle"><i class="fas fa-times-circle"></i></span>
+                          </button>
+                        </span>
+                      </div>
+                      <div class="dropdown">
+
+                        <a href="#" class="add-filter dropdown-toggle" id="dropdown-list1" data-toggle="dropdown">เพิ่มตัวกรอง</a>
+                        <ul class="dropdown-menu _box-shadow" aria-labelledby="dropdown-list1">
+                          <li><a class="dropdown-item active" data-toggle="modal" data-target="#modal-1" href="#!">ปีที่เริ่มเป็นหน่วยจัดการ</a>
+                          </li>
+                          <li><a class="dropdown-item" data-toggle="modal" data-target="#modal-2" href="#!">สถานะหน่วยจัดการ</a></li>
+                          <li><a class="dropdown-item" href="#!">ประเภทหน่วยจัดการ</a></li>
+                          <li><a class="dropdown-item" href="#!">พื้นที่หน่วยจัดการ</a></li>
+                        </ul>
+                      </div>
+                      <div class="modal modal-filter" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="modal-1" aria-hidden="true">
+                        <div class="modal-dialog _box-shadow">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="">ปีที่เริ่มเป็นหน่วยจัดการ</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="data-01" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="data-01">2561</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="data-02" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="data-02">2560</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="data-02" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="data-02">2559</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="data-02" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="data-02">2558</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- /modal -->
+                      <div class="modal modal-filter" id="modal-2" tabindex="-2" role="dialog" aria-labelledby="modal-2" aria-hidden="true">
+                        <div class="modal-dialog _box-shadow">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="">ประเด็นดำเนินงาน</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">ชุมชนน่าอยู่</label>
+                              </div>
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2">บุหรี่</label>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- /moda2/ -->
+
+                    </div>
+                  </div>
+                </div> <!-- inside-filter-bar -->
+
+                <div class="wrapper-table">
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">ชื่อหน่วยจัดการ</th>
+                        <th scope="col">ประเภทหน่วยจัดการ</th>
+                        <th scope="col">ลักษณะหน่วยจัดการ</th>
+                        <th scope="col">ประเด็นดำเนินงานของหน่วยจัดการ</th>
+                        <th scope="col">ภาค</th>
+                        <th scope="col">จังหวัด</th>
+                        <th scope="col">อำเภอ</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row">หน่วยจัดการหน่วยจัดการหน่วยจัดการประจำภาคเหนือ</td>
+                        <td>เชิงประเด็น</td>
+                        <td>NGO</td>
+                        <td>ชุมชนน่าอยุ่</td>
+                        <td>เหนือ</td>
+                        <td>เชียงราย</td>
+                        <td>พาน</td>
+                      </tr>
+                      <tr>
+                        <td scope="row">หน่วยจัดการหน่วยจัดการหน่วยจัดการประจำภาคเหนือ</td>
+                        <td>เชิงประเด็น</td>
+                        <td>NGO</td>
+                        <td>ชุมชนน่าอยุ่</td>
+                        <td>ใต้</td>
+                        <td>นครศรีธรรมราช</td>
+                        <td>ท่าศาลา</td>
+                      </tr>
+                      <tr>
+                        <td scope="row">หน่วยจัดการหน่วยจัดการหน่วยจัดการประจำภาคกลาง</td>
+                        <td>เชิงประเด็น</td>
+                        <td>NGO</td>
+                        <td>ชุมชนน่าอยุ่</td>
+                        <td>กลาง</td>
+                        <td>กรุงเทพมหานคร</td>
+                        <td>สามเสนนอก</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+              </div>
+            <div>
+          </main>
+        </div>
     </div>
 
-    <footer>
-      <div class="container">
+    <footer class="p-2">
+      <div class="">
         Footer
       </div>
     </footer>
 
-  </div><!-- /Wrapper -->
+  </div>
+  <!-- /Wrapper -->
 </body>
+
 </html>

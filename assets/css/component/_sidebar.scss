@@ -1,0 +1,13 @@
+/*----------------------------------
+Component : Sidebar
+Variants : -
+By : -
+----------------------------------*/
+.sidebar {
+  font-family: $font-head;
+  background: #E9E9E9;
+  @media (min-width: $md) {
+    border-right: 1px solid #9B9B9B;
+  }
+
+}

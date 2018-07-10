@@ -30,3 +30,16 @@ Example Font Face
   *     font-weight: 600;
   * }
   */
+
+
+  @font-face {
+      font-family: 'CS ChatThai';
+      src: url('../fonts/subset-CSChatThai.eot');
+      src: url('../fonts/subset-CSChatThai.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/subset-CSChatThai.woff2') format('woff2'),
+          url('../fonts/subset-CSChatThai.woff') format('woff'),
+          url('../fonts/subset-CSChatThai.ttf') format('truetype'),
+          url('../fonts/subset-CSChatThai.svg#CSChatThai') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
